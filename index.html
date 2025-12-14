@@ -1,400 +1,162 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Russia–Ukraine | Global Issues Final</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="style.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dylan Ryvkin – Global Issues Final Project</title>
+  <style>
+    :root{
+      --bg:#0f1220; --panel:#14182a; --muted:#9fb2c9; --text:#e8f0ff; --accent:#7bdcff; --line:#24304a;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;line-height:1.6}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{
+      position:sticky;top:0;z-index:10;
+      background:linear-gradient(180deg,#0f1220,rgba(15,18,32,.92));
+      border-bottom:1px solid var(--line)
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+    .logo{font-weight:700;letter-spacing:.3px}
+    .links a{margin-left:1rem;color:var(--muted)}
+    .links a:hover{color:var(--text)}
+    .hero{
+      padding:56px 0 28px;
+    }
+    .card{
+      background:linear-gradient(180deg,#151a31,#111528);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:22px;
+      box-shadow:0 10px 25px rgba(0,0,0,.25)
+    }
+    h1,h2,h3{line-height:1.2;margin:0 0 .6rem}
+    h1{font-size:clamp(28px,3.2vw,40px)}
+    h2{font-size:clamp(22px,2.3vw,28px);margin-top:28px}
+    h3{font-size:clamp(18px,1.8vw,22px);margin-top:20px;color:var(--accent)}
+    p{margin:.6rem 0}
+    .grid{display:grid;gap:18px;margin:20px 0}
+    @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+    footer{border-top:1px solid var(--line);margin-top:36px}
+    .muted{color:var(--muted)}
+    .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.2rem .6rem;margin-right:.4rem;color:var(--muted);font-size:.9rem}
+    .toc{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.6rem}
+    .toc a{border:1px solid var(--line);border-radius:999px;padding:.35rem .7rem;color:var(--muted)}
+    .toc a:hover{color:var(--text)}
+    .section{scroll-margin-top:84px;margin-top:20px}
+  </style>
 </head>
 <body>
-<header class="site-header">
-  <nav class="nav">
-    <a class="brand" href="index.html">Global Issues — Dylan Ryvkin</a>
-    <div class="nav-links">
-      <a href="theory.html">Theory</a>
-      <a href="analysis.html">Case Analysis</a>
-      <a href="environment.html">Environment</a>
-      <a href="solutions.html">Solutions</a>
-      <a href="works.html">Works Cited</a>
-    </div>
-  </nav>
-  <div class="hero">
-    <h1>Russia–Ukraine: Power, Inequality, and Empire</h1>
-    <p class="subtitle">A student website for the Global Issues final project</p>
-    <!-- Decorative inline SVG "image" -->
-    <svg class="hero-art" viewBox="0 0 800 200" role="img" aria-label="Abstract arcs">
-      <defs>
-        <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stop-color="#7db3ff"/>
-          <stop offset="100%" stop-color="#aaf0ff"/>
-        </linearGradient>
-      </defs>
-      <path d="M0,160 C150,80 250,240 400,160 C550,80 650,240 800,160 L800,200 L0,200 Z" fill="url(#g)" opacity="0.35"/>
-      <path d="M0,180 C200,120 300,220 500,160 C650,120 700,200 800,180 L800,200 L0,200 Z" fill="url(#g)" opacity="0.2"/>
-    </svg>
+<header>
+  <div class="wrap nav">
+    <div class="logo">Global Issues • Final Project</div>
+    <nav class="links">
+      <a href="#intro">Intro</a>
+      <a href="#framework">Theory</a>
+      <a href="#case">Case Analysis</a>
+      <a href="#env">Environment</a>
+      <a href="#sources">Sources</a>
+    </nav>
   </div>
 </header>
 
-<main class="container">
-  <section class="card">
-    <h2>Thesis</h2>
-    <p>
-      Most people explain the Russia–Ukraine war with standard geopolitics—security, borders, alliances.
-      That matters, but it’s not the whole story. Using <strong>Marxist</strong> and <strong>Postcolonial</strong> lenses,
-      this project argues the crisis is also about energy dependency, global capitalism, imperial identity,
-      and racialized responses. These deeper structures shape how the war started, how it’s fought, and how the world reacts.
-    </p>
+<main class="wrap">
+  <section id="intro" class="hero section">
+    <div class="card">
+      <h1>Russia–Ukraine Through Marxist & Postcolonial Lenses</h1>
+      <p class="muted">Dylan Ryvkin • POLSC 276 • Fall 2025</p>
+      <p>
+        People usually explain the war with traditional IR: Russia’s security and NATO vs. Ukraine’s sovereignty and deterrence. Those ideas matter, but they only cover the surface. Using
+        <span class="pill">Marxist IR</span>
+        and
+        <span class="pill">Postcolonial IR</span>
+        shows a deeper story: energy dependency and corporate profit, financial constraints through global institutions, and an imperial mindset that denies Ukraine’s full agency. These structures shape how the war started, how it’s told, and who gets empathy.
+      </p>
+      <div class="toc">
+        <a href="#framework">Jump to Theory</a>
+        <a href="#case">Jump to Case Analysis</a>
+        <a href="#env">Environmental Stress</a>
+        <a href="#sources">Works Cited</a>
+      </div>
+    </div>
   </section>
 
-  <section class="grid">
-    <a class="card link-card" href="theory.html">
-      <h3>Start with the lenses →</h3>
-      <p>Short, simple definitions of Marxist &amp; Postcolonial IR in plain language.</p>
-    </a>
-    <a class="card link-card" href="analysis.html">
-      <h3>See the case analysis →</h3>
-      <p>Energy, IMF/World Bank, imperial logic, refugee responses, and media/algorithms.</p>
-    </a>
-    <a class="card link-card" href="environment.html">
-      <h3>Environmental stress →</h3>
-      <p>Water, energy, heat, and how these pressures affect politics and cooperation.</p>
-    </a>
-    <a class="card link-card" href="solutions.html">
-      <h3>What could help? →</h3>
-      <p>Practical steps: near-term harm reduction and longer-term structural fixes.</p>
-    </a>
+  <section id="framework" class="section">
+    <div class="grid">
+      <div class="card">
+        <h2>Marxist IR (short version)</h2>
+        <p>
+          Marxist IR says you can’t understand global politics without capitalism and class. States often protect the interests of powerful groups and investors, not just some neutral “national interest.” The world economy runs on a
+          core–periphery pattern: richer “core” states capture more value from “semi-periphery” suppliers.
+        </p>
+        <p>
+          Russia is militarily strong but economically tied to exporting oil and gas to Europe. Crises can shift markets and boost profits for elites. As David Harvey argues, “crises are necessary for the reproduction of capitalism.” During this war, energy companies set profit records, and arms makers ramped up production while ordinary people paid higher bills.
+        </p>
+      </div>
+      <div class="card">
+        <h2>Postcolonial IR (short version)</h2>
+        <p>
+          Postcolonial theory examines how old empires shape today’s politics. Russia’s rhetoric treats Ukraine as not fully sovereign—echoing Tsarist/Soviet ideas that Ukrainians and Russians are “one people.” Achille Mbembe describes imperial power as defining reality for others; that fits the Kremlin’s claims about Ukrainian identity.
+        </p>
+        <p>
+          The global response also revealed racial hierarchy. Ukrainian refugees received open borders and sympathy; refugees from the Middle East and Africa often face pushbacks and suspicion. Who is seen as “civilized” still affects policy and media attention.
+        </p>
+      </div>
+    </div>
   </section>
-</main>
 
-<footer class="site-footer">
-  <p>© 2025 Dylan Ryvkin — Global Issues Final</p>
-</footer>
-</body>
-</html>
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Theory | Global Issues Final — Dylan Ryvkin</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="style.css" rel="stylesheet">
-</head>
-<body>
-<header class="site-header small">
-  <nav class="nav">
-    <a class="brand" href="index.html">Global Issues — Dylan Ryvkin</a>
-    <div class="nav-links">
-      <a href="theory.html" aria-current="page">Theory</a>
-      <a href="analysis.html">Case Analysis</a>
-      <a href="environment.html">Environment</a>
-      <a href="solutions.html">Solutions</a>
-      <a href="works.html">Works Cited</a>
-    </div>
-  </nav>
-</header>
-
-<main class="container">
-  <article class="prose">
-    <h1>Marxist &amp; Postcolonial IR — Plain and Short</h1>
-
-    <section>
-      <h2>Marxist IR (in simple words)</h2>
-      <ul>
-        <li>Global politics runs through <strong>capitalism</strong> and <strong>class</strong>. States often back elites and big firms.</li>
-        <li>The world economy is a <strong>core–periphery</strong> system. Core countries gain more; others get locked into exporting raw stuff.</li>
-        <li>Crises (like wars) can <strong>boost profits</strong> for energy and arms companies, while regular people pay the price.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Postcolonial IR (in simple words)</h2>
-      <ul>
-        <li>Empires don’t vanish in people’s heads. Former empires keep a <strong>hierarchy mindset</strong> about neighbors.</li>
-        <li>Who gets <strong>sympathy</strong> and who gets ignored often follows racial/civilizational lines.</li>
-        <li>Power includes the power to <strong>define others’ identity</strong> and “truth.” Narratives matter.</li>
-      </ul>
-    </section>
-
-    <div class="callout">
-      <p><strong>Why these two?</strong> Together, they uncover money flows, class interests, imperial habits, and biased narratives that mainstream theories often skip.</p>
-    </div>
-  </article>
-</main>
-
-<footer class="site-footer">
-  <p>© 2025 Dylan Ryvkin — Global Issues Final</p>
-</footer>
-</body>
-</html>
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Case Analysis | Global Issues Final — Dylan Ryvkin</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="style.css" rel="stylesheet">
-</head>
-<body>
-<header class="site-header small">
-  <nav class="nav">
-    <a class="brand" href="index.html">Global Issues — Dylan Ryvkin</a>
-    <div class="nav-links">
-      <a href="theory.html">Theory</a>
-      <a href="analysis.html" aria-current="page">Case Analysis</a>
-      <a href="environment.html">Environment</a>
-      <a href="solutions.html">Solutions</a>
-      <a href="works.html">Works Cited</a>
-    </div>
-  </nav>
-</header>
-
-<main class="container">
-  <article class="prose">
-    <h1>How the structures show up in the Russia–Ukraine war</h1>
-
-    <section>
-      <h2>Energy dependency (core–periphery logic)</h2>
+  <section id="case" class="section">
+    <div class="card">
+      <h2>Case Analysis</h2>
+      <h3>Energy Dependency & Capitalism</h3>
       <p>
-        Before 2022, the EU got roughly <strong>40% of its natural gas</strong> from Russia (IEA 2022). Russia needed the revenue; Europe needed the fuel.
-        Ukraine sat between them with major pipelines. That’s a classic structure: a semi-periphery exporter (Russia) tied to core buyers (EU),
-        with Ukraine in the middle. When war hit, energy prices spiked, energy firms posted record profits, and people faced higher bills.
+        Before 2022, the EU got about <strong>40%</strong> of its natural gas from Russia (IEA 2022). Russia relied on that revenue. Ukraine sits between them with key pipelines. That’s a structural tie, not a one-off choice. When war hit, prices spiked, oil and gas firms posted record earnings, and weapons contracts surged—classic Marxist dynamics of crisis benefiting capital.
       </p>
-    </section>
 
-    <section>
-      <h2>Finance &amp; constraints (IMF / World Bank)</h2>
+      <h3>Finance & Conditionality</h3>
       <p>
-        For years, Ukraine relied on IMF/World Bank help with tough conditions (austerity, privatization). During the war,
-        the World Bank said Ukraine’s economy <em>“depends on external financing”</em> (World Bank 2023). That shows how global finance can limit
-        policy choices. Marxist IR says: this is not neutral—these systems can reproduce dependency.
+        For years, Ukraine depended on IMF programs and World Bank support that came with austerity and privatization. Even during the war, the World Bank wrote that Ukraine’s economy “depends on external financing” (World Bank 2023). That’s what Cox would call hegemony: material power plus institutions and ideas that make dependence feel “necessary.”
       </p>
-    </section>
 
-    <section>
-      <h2>Imperial identity &amp; denial of sovereignty</h2>
+      <h3>Imperial Logic & Global Sympathy</h3>
       <p>
-        Postcolonial IR helps explain why Russia talks about Ukraine as “not a real state” or “one people.” That’s the old empire
-        mindset—claiming the power to define another nation’s identity. It’s about more than borders; it’s about status and history.
+        Putin’s claims that Ukraine is not a “real state” repeat an imperial script that denies Ukrainian agency. Meanwhile, the refugee response showed a racialized empathy gap—Ukrainians welcomed quickly while others are fenced out. Postcolonial theory explains both patterns.
       </p>
-    </section>
 
-    <section>
-      <h2>Racialized sympathy &amp; refugee responses</h2>
+      <h3>Digital Platforms</h3>
       <p>
-        Western support for Ukrainian refugees was fast and generous (good!), but the contrast with refugees from Syria or parts of Africa
-        reveals a hierarchy in who is seen as “like us.” Postcolonial IR names that bias and shows how it shapes policy and media.
+        The info war ran through private platforms (X/Twitter, TikTok, YouTube, Meta). Algorithms decide what gets seen; companies profit from engagement. That’s ideological power working through digital capitalism.
       </p>
-    </section>
-
-    <section>
-      <h2>Digital platforms &amp; narratives</h2>
-      <p>
-        The info war ran through private platforms (X/Twitter, TikTok, YouTube). Algorithms pushed viral frames; companies set the rules.
-        That’s a mix of Marxist concerns (corporate control, profit from engagement) and postcolonial concerns (who gets to define “truth”).
-      </p>
-    </section>
-
-    <div class="callout">
-      <p><strong>Bottom line:</strong> These structures don’t replace geopolitics—but they change the map. They shape who hurts, who profits, and whose story wins.</p>
     </div>
-  </article>
-</main>
+  </section>
 
-<footer class="site-footer">
-  <p>© 2025 Dylan Ryvkin — Global Issues Final</p>
-</footer>
+  <section id="env" class="section">
+    <div class="card">
+      <h2>Environmental Stress (brief)</h2>
+      <p>
+        The war intersects with energy transition and food systems. Shocks to gas and grain markets drive inflation and strain governments, encouraging tighter controls at home and competition abroad. In this case, environmental stress tends to <em>weaken</em> state authority in poorer states and <em>strengthen</em> it in wealthier ones, while nudging some cooperation (LNG sharing, grain corridors) and also hardening rivalries.
+      </p>
+    </div>
+  </section>
+
+  <section id="sources" class="section">
+    <div class="card">
+      <h2>Works Cited (MLA)</h2>
+      <p><strong>Cox, Robert W.</strong> “Social Forces, States and World Orders: Beyond International Relations Theory.” <em>Millennium: Journal of International Studies</em>, vol. 10, no. 2, 1981, pp. 126–155.</p>
+      <p><strong>Harvey, David.</strong> <em>A Brief History of Neoliberalism</em>. Oxford UP, 2005.</p>
+      <p><strong>International Energy Agency.</strong> “Europe’s Gas Dependence.” 2022.</p>
+      <p><strong>Mbembe, Achille.</strong> <em>On the Postcolony</em>. University of California Press, 2001.</p>
+      <p><strong>UNHCR.</strong> “Ukraine Situation Flash Update.” 2023.</p>
+      <p><strong>World Bank.</strong> “Ukraine Economic Update.” Apr. 2023.</p>
+    </div>
+  </section>
+
+  <footer class="wrap">
+    <div class="muted" style="padding:14px 0">© 2025 Dylan Ryvkin • Global Issues Final</div>
+  </footer>
+</main>
 </body>
 </html>
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Environment | Global Issues Final — Dylan Ryvkin</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="style.css" rel="stylesheet">
-</head>
-<body>
-<header class="site-header small">
-  <nav class="nav">
-    <a class="brand" href="index.html">Global Issues — Dylan Ryvkin</a>
-    <div class="nav-links">
-      <a href="theory.html">Theory</a>
-      <a href="analysis.html">Case Analysis</a>
-      <a href="environment.html" aria-current="page">Environment</a>
-      <a href="solutions.html">Solutions</a>
-      <a href="works.html">Works Cited</a>
-    </div>
-  </nav>
-</header>
 
-<main class="container">
-  <article class="prose">
-    <h1>Environmental Stress Mapping (Part I &amp; II)</h1>
-
-    <section>
-      <h2>Part I — Stress &amp; how it interacts with the crisis</h2>
-      <ul>
-        <li><strong>Factors:</strong> energy transition shocks, heat/winter extremes, pollution from strikes, food system disruption (grain exports).</li>
-        <li><strong>Type:</strong> mostly <em>slow-moving</em> (energy/food systems), with <em>sudden</em> spikes (infrastructure hits, floods from damage).</li>
-        <li><strong>Effect:</strong> higher prices, blackouts, food insecurity → more instability, migration, and stress on local governance.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Part II — Political consequences</h2>
-      <ul>
-        <li><strong>State authority:</strong> can weaken (service failures, displacement), but can also harden (emergency powers, centralization).</li>
-        <li><strong>Cooperation or competition?</strong> both—grain corridors and aid deals show cooperation; energy cut-offs and blockades show exclusion.</li>
-      </ul>
-    </section>
-  </article>
-</main>
-
-<footer class="site-footer">
-  <p>© 2025 Dylan Ryvkin — Global Issues Final</p>
-</footer>
-</body>
-</html>
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Solutions | Global Issues Final — Dylan Ryvkin</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="style.css" rel="stylesheet">
-</head>
-<body>
-<header class="site-header small">
-  <nav class="nav">
-    <a class="brand" href="index.html">Global Issues — Dylan Ryvkin</a>
-    <div class="nav-links">
-      <a href="theory.html">Theory</a>
-      <a href="analysis.html">Case Analysis</a>
-      <a href="environment.html">Environment</a>
-      <a href="solutions.html" aria-current="page">Solutions</a>
-      <a href="works.html">Works Cited</a>
-    </div>
-  </nav>
-</header>
-
-<main class="container">
-  <article class="prose">
-    <h1>What could actually help</h1>
-
-    <section>
-      <h2>Near-term harm reduction</h2>
-      <ul>
-        <li>Keep grain export corridors open; protect energy/water infrastructure.</li>
-        <li>Transparent refugee pathways (apply the same standard globally).</li>
-        <li>Targeted macro support to Ukraine with <em>clear social protections</em> (don’t make recovery = austerity only).</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Longer-term structural fixes</h2>
-      <ul>
-        <li>Reduce EU fossil dependency (build storage, interconnectors, renewables, heat-pumps).</li>
-        <li>Debt/conditionality reforms so recovery doesn’t lock in dependency.</li>
-        <li>Media/algorithm transparency (label state media, audit recommender systems in conflicts).</li>
-        <li>Support local civil society (women’s groups, independent media, veterans’ rehab).</li>
-      </ul>
-    </section>
-
-    <div class="callout">
-      <p>Diplomacy matters, but so do the <em>systems</em>: energy, finance, platforms, and norms. Fixing those lowers the odds of the next crisis.</p>
-    </div>
-  </article>
-</main>
-
-<footer class="site-footer">
-  <p>© 2025 Dylan Ryvkin — Global Issues Final</p>
-</footer>
-</body>
-</html>
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Works Cited | Global Issues Final — Dylan Ryvkin</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="style.css" rel="stylesheet">
-</head>
-<body>
-<header class="site-header small">
-  <nav class="nav">
-    <a class="brand" href="index.html">Global Issues — Dylan Ryvkin</a>
-    <div class="nav-links">
-      <a href="theory.html">Theory</a>
-      <a href="analysis.html">Case Analysis</a>
-      <a href="environment.html">Environment</a>
-      <a href="solutions.html">Solutions</a>
-      <a href="works.html" aria-current="page">Works Cited</a>
-    </div>
-  </nav>
-</header>
-
-<main class="container">
-  <article class="prose">
-    <h1>Works Cited (MLA)</h1>
-    <ul class="works">
-      <li>Cox, Robert W. “Social Forces, States and World Orders: Beyond International Relations Theory.” <em>Millennium: Journal of International Studies</em>, vol. 10, no. 2, 1981, pp. 126–155.</li>
-      <li>Harvey, David. <em>A Brief History of Neoliberalism</em>. Oxford University Press, 2005.</li>
-      <li>International Energy Agency. “Energy Market Update: Europe’s Gas Dependence.” IEA, 2022.</li>
-      <li>Mbembe, Achille. <em>On the Postcolony</em>. University of California Press, 2001.</li>
-      <li>UNHCR. “Ukraine Situation Flash Update.” United Nations High Commissioner for Refugees, 2023.</li>
-      <li>World Bank. “Ukraine Economic Update.” World Bank, Apr. 2023.</li>
-    </ul>
-  </article>
-</main>
-
-<footer class="site-footer">
-  <p>© 2025 Dylan Ryvkin — Global Issues Final</p>
-</footer>
-</body>
-</html>
-:root{
-  --bg:#0b1220;
-  --panel:#121b2f;
-  --muted:#96a4c3;
-  --text:#e9f1ff;
-  --accent:#7db3ff;
-  --accent2:#aaf0ff;
-  --card:#0f1728;
-  --border:#1f2a44;
-}
-
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;line-height:1.6}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
-
-.site-header{background:linear-gradient(180deg,#0b1220 0%, #0d1526 100%);border-bottom:1px solid var(--border);padding-bottom:1rem}
-.site-header.small{padding-bottom:.25rem}
-
-.nav{max-width:1100px;margin:0 auto;padding:1rem;display:flex;gap:1rem;align-items:center;justify-content:space-between}
-.brand{font-weight:700;color:var(--text)}
-.nav-links a{margin-left:1rem;color:var(--muted)}
-.nav a[aria-current="page"]{color:var(--text);font-weight:600}
-
-.hero{max-width:1100px;margin:0 auto;padding:1rem 1rem 0 1rem}
-.hero h1{margin:.5rem 0 0}
-.subtitle{color:var(--muted);margin:.25rem 0 1rem}
-.hero-art{width:100%;height:auto;display:block;margin-top:.5rem}
-
-.container{max-width:1100px;margin:0 auto;padding:1.25rem}
-
-.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem}
-.link-card{display:block;transition:transform .12s ease, border-color .12s ease}
-.link-card:hover{transform:translateY(-2px);border-color:var(--accent)}
-
-.prose h1,.prose h2,.prose h3{line-height:1.25}
-.prose h1{margin:.5rem 0 1rem}
-.prose h2{margin:1.25rem 0 .5rem}
-.prose p{margin:.5rem 0}
-.prose ul{margin:.25rem 0 .75rem 1rem}
-.callout{border-left:4px solid var(--accent);background:var(--panel);padding:.75rem .9rem;border-radius:8px;margin:1rem 0;color:var(--text)}
-.works{list-style:disc;margin-left:1.25rem}
-.works li{margin:.5rem 0;color:var(--text)}
-
-.site-footer{border-top:1px solid var(--border);padding:1rem;text-align:center;color:var(--muted)}
